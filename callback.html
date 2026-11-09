@@ -1,0 +1,15 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>大白</title>
+<body style="font:16px system-ui,sans-serif;background:#111;color:#eee;display:grid;place-items:center;min-height:100vh;margin:0">
+<main style="max-width:30em;padding:24px;text-align:center">
+<h1>大白</h1>
+<p id="m">…</p>
+</main>
+<script>
+// OAuth return page for a personal app. It only tells you how it went; the one-time code stays in the address bar and is never sent anywhere from here.
+var q = new URLSearchParams(location.search);
+document.getElementById('m').textContent = q.get('error') ? 'Tesla returned an error: ' + q.get('error')
+  : q.get('code') ? 'Authorization received. You can close this tab and go back to 大白.' : 'Nothing to do here.';
+</script>
